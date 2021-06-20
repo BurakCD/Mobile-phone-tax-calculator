@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Telefon Vergi Hesabı</title>
+<link href="css.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#11131a">
+	<div id="anagovde">
+		<div id="logo"><a href="https://telefonvergim.tk/" target="_blank"><img class="phonelogo" src="Pictures/mobile-phone.png" alt="phone.logo" width="40px" height="40px;"></a></div>
+		<h1>Telefon Fiyatı Hesaplama</h1>
+		<div id="forms">
+			<legend id="legend1">Yurtdışı Fiyatı</legend>
+		  	<label id="label1"><a href="https://www.foreks.com/doviz" target="_blank">$</a> Kuru: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+			<input type="number" id="dolar" name="kur" value="6,81" /><br>
+			<a id="x">Dolar simgesine tıklayarak güncel dolar kurunu öğrenebilirsiniz.</a>
+			<br>
+			<label id="label1"><a href="https://www.foreks.com/doviz" target="_blank">€ </a>Kuru: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+			<input type="number" id="euro" name="kur" value="7,69" /><br><a id="x">Euro simgesine tıklayarak güncel euro kurunu öğrenebilirsiniz.</a>
+			<br>
+			<label id="label1">Telefon Fiyatı($): &nbsp;</label>
+			<input type="number" id="fiyat" name="fiyat"/>
+			<br>
+			<button id="hesapla" onClick="hesapla()">İthalat Hesapla</button>
+			<button id="pashesapla" onClick="pashesapla()">Pasaport Hesapla</button>
+		</div>
+		<div id="sonuclar">
+			<legend id="legend1">Türkiye Fiyatı</legend>
+			<div id="bosluk"></div>
+			<div id="vergisiz"> Vergisiz Fiyat:<div id="sayi0" class="sonuccu3"></div></div>
+			<div id="bosluk"></div>
+			<div id="kulturvergi"> Kültür Bakanlığı Payı: (%1)<div id="sayi" class="sonuccu"></div></div>
+			<div id="bosluk"></div>
+			<div id="trtvergi"> TRT Bandrol Ücreti: (<a id="trt"></a>)<div id="sayi1" class="sonuccu"></div></div>
+			<div id="bosluk"></div>
+			<div id="otvpayi"> ÖTV Payı: (<a id="otvyuzde"></a>)<div id="sayi2" class="sonuccu"></div></div>
+			<div id="bosluk"></div>
+			<div id="kdvpayi"> KDV Payı: (%18)<div id="sayi3" class="sonuccu"></div></div>
+			<div id="bosluk"></div>
+			<div id="kayitucreti"> Kayıt Ücreti:<div id="sayi7" class="sonuccu"></div></div>
+			<div id="bosluk"></div>
+			<div id="toplamvergi"> Toplam Vergi: (<a id="toplamyuzde"></a>)<div id="sayi5" class="sonuccu1"></div>
+			</div>
+			<div id="bosluk"></div>
+			<div id="satisfiyati"> Satış Fiyatı:<div id="sayi6" class="sonuccu2"></div></div>
+	  	</div>
+	</div>
+	<div id="social">
+		<div class="account" ><a href="https://www.instagram.com/burak.c.d/"><img src="Pictures/ks.png" alt="instagram.logo"  width="50" height="50" /></a></div>
+		<div class="account"><a href="https://twitter.com/MrMaroonSky"><img src="Pictures/ic_launcher_twitter.png" alt="twitter.logo"  width="50" height="50" /></a></div>
+	</div>
+	<div id="ogrencikimlik"><center>Burak Cem DURSUN<br>184411016</center></div>
+</body>
+<script>
+	function hesapla(){
+		document.getElementById("sayi").innerHTML="";
+		document.getElementById("sayi1").innerHTML="";
+		document.getElementById("sayi2").innerHTML="";
+		document.getElementById("sayi3").innerHTML="";
+		document.getElementById("sayi0").innerHTML="";
+		document.getElementById("sayi5").innerHTML="";
+		document.getElementById("sayi6").innerHTML="";
+		document.getElementById("sayi7").innerHTML="";
+		var a=parseFloat(document.getElementById("dolar").value);
+		var b=parseInt(document.getElementById("fiyat").value);
+		var c=a*b;
+		var q=a*b;
+		var x;
+		var y;
+		var z;
+		var g;
+		var w;
+		document.getElementById("trt").innerHTML=10+" %";
+		var t=c<640&&c>0;
+		if (c<640){
+			var k=25;
+			document.getElementById("otvyuzde").innerHTML=k+" %";
+			var o=38.92;
+			document.getElementById("toplamyuzde").innerHTML=o+" %";
+			document.getElementById("sayi0").innerHTML=Math.round(c)+" ₺";
+			(x=(c*1)/100);
+			document.getElementById("sayi").innerHTML=Math.round(x)+" ₺";
+			c=x+c;
+			(y=(c*10)/100);
+			document.getElementById("sayi1").innerHTML=Math.round(y)+" ₺";
+			c=y+c;
+			(z=(c*25)/100);
+			document.getElementById("sayi2").innerHTML=Math.round(z)+" ₺";
+			c=z+c;
+			(g=(c*18)/100);
+			document.getElementById("sayi3").innerHTML=Math.round(g)+" ₺";
+			c=g+c;
+			w=x+y+z+g;
+			document.getElementById("sayi5").innerHTML=Math.round(w)+" ₺";
+			document.getElementById("sayi6").innerHTML=Math.round(w+q)+" ₺";
+		}else if(c<=1500){
+			var k=40;
+			document.getElementById("otvyuzde").innerHTML=k+"%";
+			var o=45.47;
+			document.getElementById("toplamyuzde").innerHTML=o+"%";
+			document.getElementById("sayi0").innerHTML=Math.round(c)+" ₺";
+			(x=(c*1)/100);
+			document.getElementById("sayi").innerHTML=Math.round(x)+" ₺";
+			c=x+c;
+			(y=(c*10)/100);
+			document.getElementById("sayi1").innerHTML=Math.round(y)+" ₺";
+			c=y+c;
+			(z=(c*40)/100);
+			document.getElementById("sayi2").innerHTML=Math.round(z)+" ₺";
+			c=z+c;
+			(g=(c*18)/100);
+			document.getElementById("sayi3").innerHTML=Math.round(g)+" ₺";
+			c=g+c;
+			w=x+y+z+g;
+			document.getElementById("sayi5").innerHTML=Math.round(w)+" ₺";
+			document.getElementById("sayi6").innerHTML=Math.round(w+q)+" ₺";
+		}else if(c>=1501){
+			var k=50;
+			document.getElementById("otvyuzde").innerHTML=k+"%";
+			var o=49.10;
+			document.getElementById("toplamyuzde").innerHTML=o+"%";
+			document.getElementById("sayi0").innerHTML=Math.round(c)+" ₺";
+			(x=(c*1)/100);
+			document.getElementById("sayi").innerHTML=Math.round(x)+" ₺";
+			c=x+c;
+			(y=(c*10)/100);
+			document.getElementById("sayi1").innerHTML=Math.round(y)+" ₺";
+			c=y+c;
+			(z=(c*50)/100);
+			document.getElementById("sayi2").innerHTML=Math.round(z)+" ₺";
+			c=z+c;
+			(g=(c*18)/100);
+			document.getElementById("sayi3").innerHTML=Math.round(g)+" ₺";
+			c=g+c;
+			w=x+y+z+g;
+			document.getElementById("sayi5").innerHTML=Math.round(w)+" ₺";
+			document.getElementById("sayi6").innerHTML=Math.round(w+q)+" ₺";
+		}else{
+			alert("Telefonun fiyatını girmelisiniz!");
+		}
+		if(b<=0){
+			alert("Telefonun fiyatını girmelisiniz!");
+		}
+	}
+	function pashesapla(){
+		document.getElementById("sayi").innerHTML="";
+		document.getElementById("sayi1").innerHTML="";
+		document.getElementById("sayi2").innerHTML="";
+		document.getElementById("sayi3").innerHTML="";
+		document.getElementById("sayi0").innerHTML="";
+		document.getElementById("sayi5").innerHTML="";
+		document.getElementById("sayi6").innerHTML="";
+		document.getElementById("sayi7").innerHTML="";
+		document.getElementById("otvyuzde").innerHTML="";
+		var a=parseFloat(document.getElementById("dolar").value);
+		var b=parseFloat(document.getElementById("fiyat").value);
+		var e=parseFloat(document.getElementById("euro").value);
+		if(b>=1){
+			var c=a*b;
+			var q=a*b;
+			var x;
+			var y;
+			var w;
+			document.getElementById("trt").innerHTML="20€";
+			document.getElementById("sayi0").innerHTML=Math.round(c)+" ₺";
+			x=e*20;
+			document.getElementById("sayi1").innerHTML=Math.round(x)+" ₺";
+			y=1838;
+			document.getElementById("sayi7").innerHTML=Math.round(y)+" ₺";
+			w=(x+y);
+			var k=(w+q);
+			document.getElementById("sayi5").innerHTML=Math.round(w)+" ₺";
+			w=w*100;
+			var o=(w/k);
+			document.getElementById("toplamyuzde").innerHTML=Math.round(o)+" %";
+			document.getElementById("sayi6").innerHTML=Math.round(k)+" ₺";
+		}else{
+			alert("Telefonun fiyatını girmelisiniz!");
+		}
+	}
+</script>
+</html>

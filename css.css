@@ -1,0 +1,216 @@
+@charset "utf-8";
+#anagovde{
+	height: 614px;
+	margin-top: 3px;
+	margin-left: 24.4%;
+	margin-right: 24.4%;
+	margin-bottom: 1%;
+	background-color:#141D26;
+	font-family: "Product Sans";
+	font-size: 17px;
+	box-shadow: 2px 2px 2px #000;
+	border-radius: 8px;
+}
+#forms{
+	height: 170px;
+	background-color:#607D8B;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1%;
+	box-shadow: 2px 2px 5px #000;
+	border-radius: 8px;
+}
+#social{
+	margin-bottom: 1%;
+	margin-left: 46%;
+}
+img:hover{
+	width: 55px;
+	height: 55px;
+}
+h1{
+	margin-top: 1%;
+	margin-left: 21%;
+	color:#FFC107;
+}
+#label1{
+	color: #FFC107;
+	margin-left: 1%;
+}
+#legend1{
+	margin-left: 1%;
+	color: #BDBDBD;
+}
+a{
+	color: #FFC107;
+	text-decoration:none;
+}
+button{
+	margin-left: 2%;
+	margin-top: 2%;
+	background-color: #362E2E;
+	color: aliceblue;
+	border-color: #362E2E;
+	font-family: "Product Sans";
+}
+button:hover{
+	background-color: #5A5454;
+}
+#x{
+	margin-left: 1%;
+	color: aliceblue;
+}
+input{
+	background-color: #362E2E;
+	color: aliceblue;
+	border-color: #362E2E;
+}
+input:hover{
+	background-color: #5A5454;
+}
+#sonuclar{
+	background-color: #455A64;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1%;
+	box-shadow: 2px 2px 5px #000;
+	height: 320px;
+	color: #75787A;
+	border-radius: 8px;
+}
+#vergisiz{
+	font-family:"Product Sans";
+	background-color: #141D26;
+	font-size: 23px;
+	margin-left: 1%;
+	margin-right: 25%;
+	height: 30px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+#trtvergi{
+	font-family:"Product Sans";
+	background-color: #141D26;
+	font-size: 23px;
+	margin-left: 1%;
+	margin-right: 25%;
+	height: 30px;
+}
+#kulturvergi{
+	font-family:"Product Sans";
+	background-color: #141D26;
+	font-size: 23px;
+	margin-left: 1%;
+	margin-right: 25%;
+	height: 30px;
+}
+#otvpayi{
+	font-family:"Product Sans";
+	background-color: #141D26;
+	font-size: 23px;
+	margin-left: 1%;
+	margin-right: 25%;
+	height: 30px;
+}
+#kdvpayi{
+	font-family:"Product Sans";
+	background-color: #141D26;
+	font-size: 23px;
+	margin-left: 1%;
+	margin-right: 25%;
+	height: 30px;
+}
+#kayitucreti{
+	font-family:"Product Sans";
+	background-color: #141D26;
+	font-size: 23px;
+	margin-left: 1%;
+	margin-right: 25%;
+	height: 30px;
+}
+.sonuccu{
+	font-family:"Product Sans";
+	float: right;
+	width: 150px;
+	background-color: #1B2836;
+	height: 30px;
+}
+#satisfiyati{
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	font-family:"Product Sans";
+	background-color: #577a3b;
+	font-size: 20px;
+	margin-left: 1%;
+	margin-right: 25%;
+	color: #1B2836;
+	height: 30px;
+}
+#toplamvergi{
+	font-family:"Product Sans";
+	background-color: #84131E;
+	font-size: 20px;
+	margin-left: 1%;
+	margin-right: 25%;
+	height: 30px;
+}
+.sonuccu1{
+	font-family:"Product Sans";
+	float: right;
+	width: 150px;
+	color: #8798A5;
+	background-color: #a40000;
+	height: 30px;
+}
+.sonuccu2{
+	font-family:"Product Sans";
+	float: right;
+	width: 150px;
+	color: #1B2836;
+	background-color: #80C14B;
+	height: 30px;
+	border-bottom-right-radius: 8px;
+}
+.sonuccu3{
+	font-family:"Product Sans";
+	float: right;
+	width: 150px;
+	color: #8798A5;
+	background-color: #1B2836;
+	height: 30px;
+	border-top-right-radius: 8px;
+}
+.account{
+	float: left;
+}
+#bosluk{
+	height: 7px;
+}
+#otvyuzde{
+	color: #AF1517;
+}
+#toplamyuzde{
+	color: #8798A5;
+}
+#trt{
+	color: #75787A;
+}
+#logo{
+	margin-left: 311px;
+	width: 40px;
+	height: 40px;
+}
+#ogrencikimlik{
+	float: right;
+	font-family: "Product Sans";
+	background-color: #FFC107;
+	color: #141D26;
+	border-radius: 6px;
+	height: 40px;
+	width: 150px;
+}
+alert{
+	background-color: #141D26;
+	color: #FFC107;
+	height: 20px;
+}
